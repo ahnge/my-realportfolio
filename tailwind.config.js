@@ -9,6 +9,7 @@ module.exports = {
         "primary-bg": "#1A1A29",
         "secondary-bg": "#181824",
         "action-pur": "#7562E0",
+        "tertairy-bg": "#31313F",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -11,7 +11,7 @@ const Nav = () => {
     dispatch(toggleMenu());
   };
   return (
-    <div className=" bg-secondary-bg sticky top-0">
+    <div className=" bg-secondary-bg sticky top-0 z-10">
       <div className="flex w-full max-w-7xl justify-between mx-auto items-center px-7">
         <div className=" text-action-pur text-xl py-3 font-bold sm:text-2xl lg:text-3xl">
           Nayzaw
