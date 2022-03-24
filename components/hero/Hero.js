@@ -3,7 +3,7 @@ import HeroRight from "./HeroRight";
 
 const Hero = () => {
   return (
-    <div className="w-full bg-primary-bg pb-10 sm:pb-0 relative">
+    <div className="w-full bg-primary-bg pb-10 sm:pb-0 relative" id="home">
       <div className="w-full px-10 max-w-7xl mx-auto pt-16 sm:pt-24 flex flex-col sm:flex-row sm:gap-5 lg:px-14">
         <HeroLeft />
         <HeroRight />

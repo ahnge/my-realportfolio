@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "./features/navmenu/menuSlice";
+import { navArr } from "./NavArr";
 
 const MobileNav = () => {
   // redux states
@@ -11,6 +12,21 @@ const MobileNav = () => {
     dispatch(toggleMenu());
   };
 
+  // onClick functions
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href");
+    const location = document.querySelector(target).offsetTop;
+
+    const navHeight = document.querySelector("#nav").offsetHeight;
+
+    window.scrollTo({
+      left: 0,
+      top: location - navHeight,
+    });
+    dispatch(toggleMenu());
+  };
+
   return (
     <div
       className={`fixed h-screen inset-y-0 w-fit bg-secondary-bg transition-all duration-300 sm:hidden z-50 ${
@@ -18,32 +34,25 @@ const MobileNav = () => {
       }`}
     >
       <button
-        className="text-white cursor-pointer ml-auto block p-3 font-bold text-xl "
+        className="text-white cursor-pointer ml-auto block p-4 mr-4 font-bold text-xl "
         onClick={handleClick}
       >
         X
       </button>
       <ul className=" text-white font-normal mt-5">
-        <li>
-          <p className=" hover:text-action-pur cursor-pointer transition py-3 px-14">
-            Home
-          </p>
-        </li>
-        <li>
-          <p className=" hover:text-action-pur cursor-pointer transition py-3 px-14">
-            About me
-          </p>
-        </li>
-        <li>
-          <p className=" hover:text-action-pur cursor-pointer transition py-3 px-14">
-            Projects
-          </p>
-        </li>
-        <li>
-          <p className=" hover:text-action-pur cursor-pointer transition py-3 px-14">
-            Contact
-          </p>
-        </li>
+        {navArr.map((item, index) => {
+          return (
+            <li key={index}>
+              <a
+                onClick={handleScroll}
+                href={`#${item}`}
+                className=" capitalize hover:text-action-pur cursor-pointer transition px-14 block py-3"
+              >
+                {item}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
