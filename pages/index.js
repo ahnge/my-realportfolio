@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useDispatch, useSelector } from "react-redux";
 import About from "../components/about/About";
 import Contact from "../components/contact/Contact";
@@ -18,6 +19,13 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Nayzaw</title>
+        <link rel="shortcut icon" href="peace.ico" type="image/x-icon" />
+        <meta name="keywords" content="Nayzaw nayzawminnaing" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta name="description" content="web developer from taunggyi" />
+      </Head>
       <Hero />
       <About />
       <Projects />

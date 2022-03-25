@@ -25,9 +25,9 @@ const About = () => {
           About me:
         </h1>
         <p className="text-white font-normal text-sm sm:text-base mt-5">
-          Hi, my name is Nay Zaw Min Naing, I am a Frontend web developer. I
-          have honed my skills in Web Development. Here are the major skills i
-          have.{" "}
+          Hi, I am Nayzaw Minnaing, a developer. I've been learning web
+          development since 2021 and now I've reach a point where I am pretty
+          confident with some frontend technologies.
         </p>
         <p className="text-white mt-3 font-semibold text-sm sm:text-base md:mt-5">
           <span className=" text-action-pur mr-3 font-bold text-5xl">1+</span>
