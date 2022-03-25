@@ -5,6 +5,10 @@ import { navArr } from "./NavArr";
 const MobileNav = () => {
   // redux states
   const menuIsOpen = useSelector((state) => state.menu.menuIsOpen);
+  const heroInview = useSelector((state) => state.inview.heroInview);
+  const aboutInview = useSelector((state) => state.inview.aboutInview);
+  const portfolioInview = useSelector((state) => state.inview.portfolioInview);
+  const contactInview = useSelector((state) => state.inview.contactInview);
   const dispatch = useDispatch();
 
   // functions to dispatch redux states
@@ -46,7 +50,17 @@ const MobileNav = () => {
               <a
                 onClick={handleScroll}
                 href={`#${item}`}
-                className=" capitalize hover:text-action-pur cursor-pointer transition px-14 block py-3"
+                className={`capitalize hover:text-action-pur cursor-pointer transition px-12 block py-3 border-l-8 border-transparent ${
+                  heroInview && item === "home"
+                    ? "text-action-pur border-white"
+                    : aboutInview && item === "about"
+                    ? "text-action-pur border-white"
+                    : portfolioInview && item === "portfolio"
+                    ? "text-action-pur border-white"
+                    : contactInview && item === "contact"
+                    ? "text-action-pur border-white"
+                    : ""
+                }`}
               >
                 {item}
               </a>

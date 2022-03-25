@@ -5,9 +5,6 @@ import { toggleMenu } from "../components/features/navmenu/menuSlice";
 import Hero from "../components/hero/Hero";
 import MobileNav from "../components/MobileNav";
 import Projects from "../components/projects/Projects";
-import InterestedTech from "../components/techusing/InterestedTech";
-import LearningTech from "../components/techusing/LearningTech";
-import Tech from "../components/techusing/Tech";
 
 export default function Home() {
   // redux states
@@ -23,9 +20,6 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <Tech />
-      <LearningTech />
-      <InterestedTech />
       <Projects />
       <Contact />
       {menuIsOpen && (

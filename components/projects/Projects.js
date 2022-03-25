@@ -2,10 +2,25 @@ import SingleProject from "./SingleProject";
 import spaceImg from "../../public/space-web.png";
 import ecommerceProductPageImg from "../../public/ecommerce-product-page.png";
 import eurommrImg from "../../public/eurommr-snip.png";
+import { useInView } from "react-intersection-observer";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { portfolioActive } from "../features/navmenu/inViewSlice";
 
 const Projects = () => {
+  const { ref: portfolioRef, inView: portfolioInview } = useInView({
+    threshold: 0.4,
+  });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (portfolioInview) {
+      dispatch(portfolioActive());
+    }
+  }, [portfolioInview]);
+
   return (
-    <div className="w-full bg-primary-bg" id="portfolio">
+    <div ref={portfolioRef} className="w-full bg-primary-bg" id="portfolio">
       <div className="w-full max-w-7xl mx-auto px-10 lg:px-14 pt-9 pb-20">
         <h1 className="text-action-pur text-2xl md:text-3xl lg:text-[2rem] font-semibold">
           Fearured projects
@@ -20,6 +35,8 @@ const Projects = () => {
               imgsrc={eurommrImg}
               title="eurommr"
               description="This is my very first freelancing project using nextjs and strapi."
+              liveLink="https://eurommr.com"
+              github="https://github.com/ahnge/eurommr_next"
             />
           </div>
           <div>
@@ -27,6 +44,8 @@ const Projects = () => {
               imgsrc={ecommerceProductPageImg}
               title="fem challenge"
               description="A challenge from frontendmentor site that I finished after learning redux."
+              liveLink="https://ecommerce-product-page-virid.vercel.app/"
+              github="https://github.com/ahnge/ecommerce-product-page"
             />
           </div>
           <div>
@@ -34,6 +53,8 @@ const Projects = () => {
               imgsrc={spaceImg}
               title="fem challenge"
               description="A challenge from frontendmentor site that I finished after learning react."
+              liveLink="https://space-tourism1.netlify.app/"
+              github="https://github.com/ahnge/fem-space-tourism-website"
             />
           </div>
         </div>

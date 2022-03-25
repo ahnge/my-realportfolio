@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const Layout = ({ children }) => {
   return (
     <Provider store={store}>
-      <div className=" font-poppins">
+      <div className=" font-poppins bg-primary-bg">
         <Nav />
         {children}
         <Footer />
