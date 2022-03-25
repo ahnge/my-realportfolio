@@ -23,7 +23,7 @@ export default function Home() {
         <title>Nayzaw</title>
         <link rel="shortcut icon" href="peace.ico" type="image/x-icon" />
         <meta name="keywords" content="Nayzaw nayzawminnaing" />
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
         <meta name="description" content="web developer from taunggyi" />
       </Head>
       <Hero />

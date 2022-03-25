@@ -9,6 +9,7 @@ const ContactLeft = () => {
           href="https://github.com/ahnge"
           className="w-10 text-action-pur hover:text-white transition"
           target="_blank"
+          rel="noreferrer"
         >
           <GithubLogo />
         </a>
@@ -16,10 +17,16 @@ const ContactLeft = () => {
           href="https://www.linkedin.com/in/nayzaw-minnaing/"
           target="_blank"
           className="w-10 text-action-pur hover:text-white transition"
+          rel="noreferrer"
         >
           <LinkedInLogo />
         </a>
-        <a href="" className="w-10 text-action-pur hover:text-white transition">
+        <a
+          href="https://www.facebook.com/nayzawminnaing1/"
+          target="_blank"
+          rel="noreferrer"
+          className="w-10 text-action-pur hover:text-white transition"
+        >
           <FacebookLogo />
         </a>
       </div>
