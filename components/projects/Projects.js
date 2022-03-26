@@ -8,9 +8,15 @@ import { useEffect } from "react";
 import { portfolioActive } from "../features/navmenu/inViewSlice";
 
 const Projects = () => {
+  // useInview hook
   const { ref: portfolioRef, inView: portfolioInview } = useInView({
     threshold: 0.4,
   });
+  const { ref: textRef, inView: textInview } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
+  // redux
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,7 +31,14 @@ const Projects = () => {
         <h1 className="text-action-pur text-2xl md:text-3xl lg:text-[2rem] font-semibold">
           Fearured projects
         </h1>
-        <p className="text-white font-normal mt-3 text-sm sm:text-base lg:mt-5">
+        <p
+          ref={textRef}
+          className={`text-white font-normal mt-3 text-sm sm:text-base lg:mt-5 transition duration-1000 ${
+            textInview
+              ? "opacity-100 translate-x-0"
+              : " -translate-x-5 opacity-0"
+          }`}
+        >
           I have worked on many projects over the course of being a Web
           Developer, here are a few of my projects.
         </p>

@@ -22,9 +22,6 @@ const HeroBtns = () => {
       >
         Projects <Eye />
       </button>
-      <button className="flex w-fit px-6 py-2 rounded-lg lg:mr-5 text-base bg-action-pur hover:shadow-lg hover:shadow-action-pur/50 transition hover:scale-105">
-        Download Resume <User />
-      </button>
     </div>
   );
 };

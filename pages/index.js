@@ -20,11 +20,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nayzaw</title>
+        <title>Nayzaw Oppa</title>
         <link rel="shortcut icon" href="peace.ico" type="image/x-icon" />
-        <meta name="keywords" content="Nayzaw nayzawminnaing" />
-        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
-        <meta name="description" content="web developer from taunggyi" />
+        <meta name="keywords" content="nayzaw nayzawminnaing" />
+        <meta
+          name="description"
+          content="Freelance developer. I create seamless web experiences for end-users."
+        />
       </Head>
       <Hero />
       <About />
