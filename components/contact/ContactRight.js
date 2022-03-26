@@ -3,8 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const ContactRight = () => {
   // States
-  const [success, setSuccess] = useState(false);
-  const [fail, setFail] = useState(false);
+  const [msgSend, setMsgSend] = useState(false);
 
   // useInview hook
   const { ref: magicRef, inView: maginInview } = useInView({
@@ -21,28 +20,11 @@ const ContactRight = () => {
       formData[item.name] = item.value;
       item.value = "";
     });
-    fetch("/api/mail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then(() => {
-        setSuccess(true);
-      })
-      .catch(() => {
-        setFail(true);
-      });
-  };
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setSuccess(false);
-      setFail(false);
+    setMsgSend(true);
+    setTimeout(() => {
+      setMsgSend(false);
     }, 3000);
-    return () => clearTimeout(timeout);
-  }, [success, fail]);
+  };
 
   return (
     <div className="mt-6 md:flex-1">
@@ -90,16 +72,13 @@ const ContactRight = () => {
         >
           Send
         </button>
-        {success && (
-          <span className="text-white text-sm bg-green-400 px-4 py-1 rounded-md ml-5">
-            Success!
-          </span>
-        )}
-        {fail && (
-          <span className="text-white text-sm bg-red-500 px-4 py-1 rounded-md ml-5">
-            Oops! Try later.
-          </span>
-        )}
+        <div
+          className={`text-white text-xs md:text-sm ${
+            msgSend ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          Reach me via messenger. This feature doesn&apos;t work yet.
+        </div>
       </form>
     </div>
   );
