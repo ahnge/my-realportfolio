@@ -13,7 +13,7 @@ export default function handler(req, res) {
   const data = {
     to: "scotthomles4@gmail.com",
     from: "nayzaw@nayzaw.com",
-    subject: "New web form message from nayzaw.com!",
+    subject: "Someone want to connect!",
     text: message,
     html: message.replace(/\r\n/g, "<br>"),
   };
@@ -25,7 +25,7 @@ export default function handler(req, res) {
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).json({ status: "notOK" });
+      res.status(error.statusCode || 500).json({ error: error.message });
     });
 
   res.status(200).json({ status: "OK" });
