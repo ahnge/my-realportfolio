@@ -1,4 +1,4 @@
-import { Mongo, NodeLogo } from "../logos/logo";
+import { DjangoLogo, PostgrasLogo, PythonLogo } from "../logos/logo";
 
 const LearningTech = () => {
   return (
@@ -8,10 +8,13 @@ const LearningTech = () => {
       </h1>
       <div className="grid grid-cols-3 gap-0 mt-10 lg:mt-14 sm:grid-cols-5">
         <div className=" w-16 md:w-20 lg:w-24 self-center justify-self-center">
-          <NodeLogo />
+          <PythonLogo />
         </div>
         <div className=" w-16 md:w-20 lg:w-24 self-center justify-self-center">
-          <Mongo />
+          <DjangoLogo />
+        </div>
+        <div className=" w-16 md:w-20 lg:w-24 self-center justify-self-center">
+          <PostgrasLogo />
         </div>
         <div className="text-center text-xs sm:text-sm md:text-base text-green-400 self-center">
           Algorithms & <br /> Data structures

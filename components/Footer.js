@@ -5,7 +5,7 @@ const Footer = () => {
         <p className="text-white text-xs">Copyright © 2022 Nayzaw.</p>
         <div className="flex flex-col text-white text-xs space-y-3 mt-3 sm:mt-0">
           <p>Frontend Developer</p>
-          <p>Coffee Enthusiast</p>
+          <p>I hate cats</p>
         </div>
       </div>
     </div>

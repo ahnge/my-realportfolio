@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 import { useDispatch } from "react-redux";
 import LearningTech from "../techusing/LearningTech";
 import Tech from "../techusing/Tech";
-import InterestedTech from "../techusing/InterestedTech";
 import { aboutActive } from "../features/navmenu/inViewSlice";
 
 const About = () => {
@@ -61,7 +60,6 @@ const About = () => {
       </div>
       <Tech />
       <LearningTech />
-      <InterestedTech />
     </div>
   );
 };
