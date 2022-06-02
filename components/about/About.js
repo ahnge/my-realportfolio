@@ -41,9 +41,9 @@ const About = () => {
               : " -translate-x-5 opacity-0"
           }`}
         >
-          Hi, I am Nayzaw Minnaing, a developer. I&apos;ve been learning web
-          development since 2021 and now I&apos;ve reach a point where I am
-          pretty confident with some frontend technologies.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam ab
+          reprehenderit facilis, repellendus laudantium animi iste itaque saepe?
+          Odit, nesciunt.
         </p>
         <p
           ref={expRef}
@@ -54,8 +54,8 @@ const About = () => {
           }`}
         >
           <span className=" text-action-pur mr-3 font-bold text-5xl">1+</span>
-          year of experience. Specialised in building frontend website, while
-          ensuring a seamless web experience for end users.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem odio
+          ipsam ad eligendi accusamus!
         </p>
       </div>
       <Tech />

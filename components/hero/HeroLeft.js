@@ -66,7 +66,8 @@ const HeroLeft = () => {
             : " -translate-x-5 opacity-0"
         }`}
       >
-        Freelance developer. I create seamless web experiences for end-users.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ipsam
+        autem pariatur reprehenderit.
       </p>
       <HeroBtns />
     </div>
