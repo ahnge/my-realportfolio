@@ -2,6 +2,7 @@ import SingleProject from "./SingleProject";
 import spaceImg from "../../public/space-web.png";
 import ecommerceProductPageImg from "../../public/ecommerce-product-page.png";
 import eurommrImg from "../../public/eurommr-snip.png";
+import devsearchImg from "../../public/devsearch.png";
 import { useInView } from "react-intersection-observer";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -43,6 +44,15 @@ const Projects = () => {
           Developer, here are a few of my projects.
         </p>
         <div className="grid grid-cols-1 gap-5 md:px-5 mt-10 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3">
+          <div>
+            <SingleProject
+              imgsrc={devsearchImg}
+              title="Devsearch"
+              description="My very first full stack app that I followed from a course."
+              liveLink="https://mydevsearch-a.herokuapp.com/"
+              github="https://github.com/ahnge/devsearch"
+            />
+          </div>
           <div>
             <SingleProject
               imgsrc={eurommrImg}
