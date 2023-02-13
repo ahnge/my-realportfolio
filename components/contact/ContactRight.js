@@ -1,15 +1,8 @@
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 
 const ContactRight = () => {
   // States
   const [msgSend, setMsgSend] = useState(false);
-
-  // useInview hook
-  const { ref: magicRef, inView: maginInview } = useInView({
-    threshold: 1,
-    triggerOnce: true,
-  });
 
   // functions
   const handleSunmit = async (e) => {
@@ -29,10 +22,7 @@ const ContactRight = () => {
   return (
     <div className="mt-6 md:flex-1">
       <p
-        ref={magicRef}
-        className={`text-white text-base font-semiboldk sm:text-lg transition duration-1000 ${
-          maginInview ? "opacity-100 translate-x-0" : "-translate-x-5 opacity-0"
-        }`}
+        className={`text-white text-base font-semiboldk sm:text-lg transition duration-1000 }`}
       >
         Wanna make magic together?
       </p>

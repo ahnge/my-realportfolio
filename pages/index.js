@@ -1,20 +1,18 @@
 import Head from "next/head";
-import { useDispatch, useSelector } from "react-redux";
+import { useMenu, useMenuDispatch } from "../components/context/MenuContext";
 import About from "../components/about/About";
 import Contact from "../components/contact/Contact";
-import { toggleMenu } from "../components/features/navmenu/menuSlice";
 import Hero from "../components/hero/Hero";
-import MobileNav from "../components/MobileNav";
 import Projects from "../components/projects/Projects";
 
 export default function Home() {
   // redux states
-  const menuIsOpen = useSelector((state) => state.menu.menuIsOpen);
-  const dispatch = useDispatch();
+  const menuIsOpen = useMenu();
+  const dispatch = useMenuDispatch();
 
   // functions to dispatch redux states
   const handleClick = () => {
-    dispatch(toggleMenu());
+    dispatch({ type: "toggle" });
   };
 
   return (
@@ -38,7 +36,6 @@ export default function Home() {
           onClick={handleClick}
         ></div>
       )}
-      <MobileNav />
     </>
   );
 }

@@ -1,19 +1,13 @@
-import { useDispatch, useSelector } from "react-redux";
 import { Hamburger } from "./logos/logo";
-import { toggleMenu } from "./features/navmenu/menuSlice";
-import { navArr } from "./NavArr";
+import { useMenuDispatch } from "./context/MenuContext";
 
 const Nav = () => {
-  // redux states
-  const heroInview = useSelector((state) => state.inview.heroInview);
-  const aboutInview = useSelector((state) => state.inview.aboutInview);
-  const portfolioInview = useSelector((state) => state.inview.portfolioInview);
-  const contactInview = useSelector((state) => state.inview.contactInview);
-  const dispatch = useDispatch();
+  // MenuContext
+  const mdispatch = useMenuDispatch();
 
-  // functions to dispatch redux states
-  const handleClick = () => {
-    dispatch(toggleMenu());
+  // functions to dispatch menu states
+  const handleToggle = () => {
+    mdispatch({ type: "toggle" });
   };
 
   // functions
@@ -29,6 +23,9 @@ const Nav = () => {
       top: location - navHeight,
     });
   };
+
+  //
+  const navArr = ["home", "about", "portfolio", "contact"];
 
   return (
     <div
@@ -51,17 +48,7 @@ const Nav = () => {
                   <a
                     onClick={handleScroll}
                     href={`#${item}`}
-                    className={` py-6 block capitalize cursor-pointer hover:text-action-pur border-b-4 border-transparent hover:border-action-pur transition ${
-                      heroInview && item === "home"
-                        ? "text-action-pur border-white"
-                        : aboutInview && item === "about"
-                        ? "text-action-pur border-white"
-                        : portfolioInview && item === "portfolio"
-                        ? "text-action-pur border-white"
-                        : contactInview && item === "contact"
-                        ? "text-action-pur border-white"
-                        : ""
-                    }`}
+                    className={` py-6 block capitalize cursor-pointer hover:text-action-pur border-b-4 border-transparent hover:border-action-pur transition `}
                   >
                     {item}
                   </a>
@@ -70,7 +57,7 @@ const Nav = () => {
             })}
           </ul>
         </nav>
-        <div onClick={handleClick} className="cursor-pointer sm:hidden py-3">
+        <div onClick={handleToggle} className="cursor-pointer sm:hidden py-3">
           <Hamburger />
         </div>
       </div>
