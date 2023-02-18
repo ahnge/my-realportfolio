@@ -1,9 +1,10 @@
-import { Hamburger } from "./logos/logo";
-import { useMenuDispatch } from "./context/MenuContext";
+import { CloseLogo, Hamburger } from "./logos/logo";
+import { useMenuDispatch, useMenu } from "./context/MenuContext";
 
 const Nav = () => {
   // MenuContext
   const mdispatch = useMenuDispatch();
+  const menuIsOpen = useMenu();
 
   // functions to dispatch menu states
   const handleToggle = () => {
@@ -58,7 +59,7 @@ const Nav = () => {
           </ul>
         </nav>
         <div onClick={handleToggle} className="cursor-pointer sm:hidden py-3">
-          <Hamburger />
+          {menuIsOpen ? <CloseLogo /> : <Hamburger />}
         </div>
       </div>
     </div>

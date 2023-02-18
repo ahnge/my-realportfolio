@@ -26,6 +26,7 @@ function menuReducer(state, action) {
   }
 }
 
+// init state
 const menuIsOpen = false;
 
 export const useMenu = () => {

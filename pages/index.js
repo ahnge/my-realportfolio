@@ -1,19 +1,14 @@
 import Head from "next/head";
-import { useMenu, useMenuDispatch } from "../components/context/MenuContext";
+import { useMenu } from "../components/context/MenuContext";
 import About from "../components/about/About";
 import Contact from "../components/contact/Contact";
 import Hero from "../components/hero/Hero";
 import Projects from "../components/projects/Projects";
+import MobileMenu from "../components/MobileMenu";
 
 export default function Home() {
   // redux states
   const menuIsOpen = useMenu();
-  const dispatch = useMenuDispatch();
-
-  // functions to dispatch redux states
-  const handleClick = () => {
-    dispatch({ type: "toggle" });
-  };
 
   return (
     <>
@@ -30,12 +25,7 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
-      {menuIsOpen && (
-        <div
-          className=" fixed inset-0 bg-black/40 cursor-pointer z-10 backdrop-blur-sm"
-          onClick={handleClick}
-        ></div>
-      )}
+      {menuIsOpen && <MobileMenu />}
     </>
   );
 }
