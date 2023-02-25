@@ -1,7 +1,19 @@
+import Link from "next/link";
 import { useMenuDispatch } from "./context/MenuContext";
-
-const navArr = ["home", "about", "portfolio", "contact"];
-
+const navArr = [
+  {
+    title: "home",
+    link: "",
+  },
+  {
+    title: "about",
+    link: "about",
+  },
+  {
+    title: "projects",
+    link: "projects",
+  },
+];
 const MobileMenu = () => {
   const dispatch = useMenuDispatch();
 
@@ -10,36 +22,22 @@ const MobileMenu = () => {
     dispatch({ type: "toggle" });
   };
 
-  const handleScroll = (e) => {
-    e.preventDefault();
-    const target = e.target.getAttribute("href");
-    const location = document.querySelector(target).offsetTop;
-
-    const navHeight = document.querySelector("#nav").offsetHeight;
-
-    window.scrollTo({
-      left: 0,
-      top: location - navHeight,
-    });
-  };
-
   return (
     <div
-      className=" fixed inset-0 bg-black/40 cursor-pointer backdrop-blur-sm sm:hidden"
+      className="fixed inset-0 z-10 flex justify-end cursor-pointer bg-black/40 backdrop-blur-sm md:hidden"
       onClick={handleClick}
     >
-      <nav className="">
-        <ul className="absolute text-white top-16 rounded-sm right-5 flex p-5 bg-white/30 flex-col text-base lg:text-lg font-semibold">
+      <nav className="mt-16 mr-8">
+        <ul className="flex flex-col p-5 text-base font-semibold text-white rounded-sm bg-white/30 lg:text-lg">
           {navArr.map((item, index) => {
             return (
               <li key={index}>
-                <a
-                  onClick={handleScroll}
-                  href={`#${item}`}
-                  className={` py-3 block capitalize cursor-pointer hover:text-action-pur border-b-4 border-transparent hover:border-action-pur transition `}
+                <Link
+                  href={`/${item.link}`}
+                  className={`py-3 block capitalize cursor-pointer hover:text-action-pur border-b-4 border-transparent hover:border-action-pur transition `}
                 >
-                  {item}
-                </a>
+                  {item.title}
+                </Link>
               </li>
             );
           })}

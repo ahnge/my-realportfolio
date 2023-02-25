@@ -1,11 +1,14 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+import { MenuProvider } from "../components/context/MenuContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <MenuProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </MenuProvider>
   );
 }
 

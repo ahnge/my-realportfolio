@@ -1,12 +1,9 @@
 const Footer = () => {
   return (
-    <div className="w-full bg-secondary-bg">
-      <div className="w-full max-w-7xl mx-auto px-10 lg:px-14 py-9 flex flex-col sm:flex-row sm:justify-between">
-        <p className="text-white text-xs">Copyright © 2022 Nayzaw.</p>
-        <div className="flex flex-col text-white text-xs space-y-3 mt-3 sm:mt-0">
-          <p>Frontend Developer</p>
-          <p>I hate cats</p>
-        </div>
+    <div className="flex flex-col justify-center w-full h-32 px-5 lg:px-8 bg-stone-50 dark:bg-secondary-bg">
+      <div className="flex flex-col w-full gap-2 mx-auto my-auto text-black md:text-sm dark:text-white/60 max-w-7xl sm:flex-row sm:justify-between">
+        <p>Copyright © 2022 Nayzaw.</p>
+        <p>Web Developer</p>
       </div>
     </div>
   );
