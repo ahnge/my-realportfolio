@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -15,9 +16,9 @@ const About = () => {
         </p>
         <p className="mt-4">
           I've developed a solid foundation in HTML, CSS, and JavaScript, as
-          well as experience with React, NextJs, Tailwind, Python, Django, SQL
-          and Flask. I'm always eager to learn more and stay up-to-date with the
-          latest trends and best practices in web development.
+          well as experience with React, NextJs, Tailwind, Python, SQL, Flask,
+          PHP and Laravel. I'm always eager to learn more and stay up-to-date
+          with the latest trends and best practices in web development.
         </p>
         <p className="mt-4">
           My personal approach to web development involves understanding the
@@ -30,6 +31,18 @@ const About = () => {
           Thank you for taking the time to visit my portfolio website. I'm
           excited to hear about your next project and how I can help bring it to
           life.
+        </p>
+        <br />
+        <h1 className="text-2xl font-bold sm:text-3xl mt-4 lg:text-4xl">
+          Certificates
+        </h1>
+        <p className="mt-3">
+          <Link
+            href="https://certificates.cs50.io/d8878a4d-eba1-4c6b-9d30-d02aae197450.pdf?size=letter"
+            target="_blank"
+          >
+            CS50x
+          </Link>
         </p>
       </main>
     </div>

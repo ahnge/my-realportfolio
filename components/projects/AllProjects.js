@@ -3,15 +3,15 @@ import SingleProject from "./SingleProject";
 export const projects = [
   {
     id: 1,
-    title: "foo",
-    shortDescription: "a simple landing page",
-    github: "temp",
+    title: "Careerhub",
+    shortDescription: "A job portal web application",
+    github: "https://github.com/ahnge/careerhub",
   },
   {
     id: 2,
-    title: "bar",
+    title: "Eurommr",
     shortDescription: "a simple landing page",
-    github: "temp",
+    github: "https://github.com/ahnge/eurommr_next",
   },
 ];
 
