@@ -17,8 +17,8 @@ const HeroLeft = () => {
         className={`font-normal text-base sm:mx-auto mt-3 md:mt-5 lg:text-lg max-w-md xl:mt-8 transition duration-1000 xl:mx-0`}
       >
         A web developer with a passion for creating beautiful and functional
-        websites. I'm committed to delivering exceptional results for my
-        clients. Let's work together to bring your vision to life!
+        websites. I&apox;m committed to delivering exceptional results for my
+        clients. Let&apox;s work together to bring your vision to life!
       </p>
       <SocialIcons />
     </div>
