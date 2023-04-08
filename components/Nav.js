@@ -1,11 +1,14 @@
 import { CloseLogo, Hamburger, Moon, Sun } from "./logos/logo";
 import { useMenuDispatch, useMenu } from "./context/MenuContext";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Nav = () => {
   // MenuContext
   const dispatch = useMenuDispatch();
   const { menuIsOpen, dark } = useMenu();
+
+  const router = useRouter();
 
   // functions to dispatch menu states
   const handleToggle = () => {
@@ -16,17 +19,19 @@ const Nav = () => {
   const navArr = [
     {
       title: "home",
-      link: "",
+      link: "/",
     },
     {
       title: "about",
-      link: "about",
+      link: "/about",
     },
     {
       title: "projects",
-      link: "projects",
+      link: "/projects",
     },
   ];
+
+  console.log(router.pathname);
 
   return (
     <div
@@ -46,8 +51,12 @@ const Nav = () => {
               return (
                 <li key={index}>
                   <Link
-                    href={`/${item.link}`}
-                    className={` py-6 block capitalize cursor-pointer hover:text-action-pur dark:hover:text-white dark:hover:border-white border-b-4 border-transparent hover:border-action-pur transition `}
+                    href={`${item.link}`}
+                    className={`py-6 block capitalize cursor-pointer hover:text-action-pur dark:hover:text-white dark:hover:border-white border-b-4 border-transparent hover:border-action-pur transition ${
+                      item.link === router.pathname
+                        ? "text-action-pur dark:text-white"
+                        : ""
+                    }`}
                   >
                     {item.title}
                   </Link>
