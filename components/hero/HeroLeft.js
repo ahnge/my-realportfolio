@@ -1,75 +1,26 @@
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
-import HeroBtns from "./HeroBtns";
+import SocialIcons from "./SocialIcons";
 
 const HeroLeft = () => {
-  // states
-  const [nameIsInView, setNameIsInView] = useState(false);
-  const [descIsInView, setDescIsInView] = useState(false);
-
-  // useinview hook
-  const { ref: helloRef, inView: helloInView } = useInView({
-    threshold: 1,
-    triggerOnce: true,
-  });
-  const { ref: nameRef, inView: nameInview } = useInView({
-    threshold: 1,
-    triggerOnce: true,
-  });
-  const { ref: descRef, inView: descInview } = useInView({
-    threshold: 1,
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setNameIsInView(true);
-    }, 500);
-
-    const secTimeout = setTimeout(() => {
-      setDescIsInView(true);
-    }, 1000);
-
-    return () => {
-      clearTimeout(timeout);
-      clearTimeout(secTimeout);
-    };
-  }, [nameInview, descInview]);
-
   return (
-    <div className="text-white flex-1 sm:pt-10 sm:pb-28 lg:pt-16 xl:pt-24">
+    <div className="flex-1 text-tertairy-bg dark:text-white sm:pt-10 sm:pb-28 lg:pt-16 xl:pt-24 sm:text-center xl:text-left">
       <p
-        ref={helloRef}
-        className={`text-base font-semibold md:text-xl lg:text-2xl xl:text-[2rem] transition duration-1000 ${
-          helloInView
-            ? "opacity-100 translate-x-0"
-            : " -translate-x-5 opacity-0"
-        }`}
+        className={`text-base font-semibold md:text-xl lg:text-2xl xl:text-[2rem] transition duration-1000 `}
       >
         Hello, I&apos;m
       </p>
       <h3
-        ref={nameRef}
-        className={`font-semibold text-2xl md:text-4xl lg:text-5xl mt-2 md:mt-4 xl:text-[3.25rem] transition duration-1000 ${
-          nameIsInView
-            ? "opacity-100 translate-x-0"
-            : " -translate-x-5 opacity-0"
-        }`}
+        className={`font-semibold text-2xl md:text-4xl mt-2 md:mt-4 transition duration-1000`}
       >
-        Nayzaw Minnaing
+        Nay Zaw Min Naing
       </h3>
       <p
-        ref={descRef}
-        className={`font-normal text-base mt-3 md:mt-5 lg:text-lg max-w-md xl:mt-8 transition duration-1000 ${
-          descIsInView
-            ? "opacity-100 translate-x-0"
-            : " -translate-x-5 opacity-0"
-        }`}
+        className={`font-normal text-base sm:mx-auto mt-3 md:mt-5 lg:text-lg max-w-md xl:mt-8 transition duration-1000 xl:mx-0`}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ipsam
-        autem pariatur reprehenderit.
+        A web developer with a passion for creating beautiful and functional
+        websites. I&apox;m committed to delivering exceptional results for my
+        clients. Let&apox;s work together to bring your vision to life!
       </p>
-      <HeroBtns />
+      <SocialIcons />
     </div>
   );
 };

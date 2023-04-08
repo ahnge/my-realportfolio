@@ -1,14 +1,21 @@
 import Image from "next/image";
 import profileImg from "../../public/profile1.jpg";
+import Blob from "./Blob";
 
 const HeroRight = () => {
   return (
-    <div className=" mt-24 flex-1 sm:mt-0">
-      <dir className="w-[230px] h-[230px] mt-10 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[486px] xl:h-[486px] bg-action-pur relative rounded-full mx-auto">
-        <div className=" absolute w-[196px] h-[196px] md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[366px] xl:h-[366px] left-4 lg:left-6 xl:left-14 -top-10 md:-top-16">
-          <Image src={profileImg} className="rounded-full" priority={true} />
+    <div className="flex-1 mt-24 sm:mt-0">
+      <div className="relative w-full max-w-xs mx-auto lg:max-w-lg">
+        <Blob />
+        <div className=" absolute w-[196px] lg:w-72 xl:w-[366px] top-0 left-1/2 -translate-x-1/2">
+          <Image
+            src={profileImg}
+            alt="profile picture of Nay Zaw"
+            className="rounded-full"
+            priority={true}
+          />
         </div>
-      </dir>
+      </div>
     </div>
   );
 };
