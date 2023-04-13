@@ -7,17 +7,17 @@ const About = () => {
       <main className="mx-auto text-black p-7 lg:p-10 dark:text-white max-w-7xl lg:pt-14">
         <h1 className="text-2xl font-bold sm:text-3xl lg:text-4xl">About</h1>
         <p className="mt-4">
-          Hi, I&apox;m Nay Zaw Min Naing, a self-taught web developer with a
+          Hi, I&#39;m Nay Zaw Min Naing, a self-taught web developer with a
           passion for creating beautiful and functional websites. While I
-          don&apox;t have any formal work experience, I&apox;ve spent countless
-          hours learning and practicing the craft of web development. I&apox;m
+          don&#39;t have any formal work experience, I&#39;ve spent countless
+          hours learning and practicing the craft of web development. I&#39;m
           driven by a desire to create engaging online experiences that are both
           visually appealing and user-friendly.
         </p>
         <p className="mt-4">
-          I&apox;ve developed a solid foundation in HTML, CSS, and JavaScript,
-          as well as experience with React, NextJs, Tailwind, Python, SQL,
-          Flask, PHP and Laravel. I&apox;m always eager to learn more and stay
+          I&#39;ve developed a solid foundation in HTML, CSS, and JavaScript, as
+          well as experience with React, NextJs, Tailwind, Python, SQL, Flask,
+          PHP and Laravel. I&#39;m always eager to learn more and stay
           up-to-date with the latest trends and best practices in web
           development.
         </p>
@@ -29,7 +29,7 @@ const About = () => {
           delivering high-quality work.
         </p>
         <p className="mt-4">
-          Thank you for taking the time to visit my portfolio website. I&apox;m
+          Thank you for taking the time to visit my portfolio website. I&#39;m
           excited to hear about your next project and how I can help bring it to
           life.
         </p>
