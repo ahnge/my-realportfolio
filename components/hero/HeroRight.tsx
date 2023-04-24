@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profileImg from "../../public/profile1.jpg";
+import profileImg from "../../public/me.jpg";
 import Blob from "./Blob";
 
 const HeroRight = () => {
