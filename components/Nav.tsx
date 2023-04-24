@@ -12,7 +12,7 @@ const Nav = () => {
 
   // functions to dispatch menu states
   const handleToggle = () => {
-    dispatch({ type: "toggle" });
+    dispatch && dispatch({ type: "toggle" });
   };
 
   //
@@ -30,8 +30,6 @@ const Nav = () => {
       link: "/projects",
     },
   ];
-
-  console.log(router.pathname);
 
   return (
     <div
@@ -65,7 +63,7 @@ const Nav = () => {
             })}
             <li
               className={` py-6 block capitalize cursor-pointer hover:text-action-pur dark:hover:text-white dark:hover:border-white border-b-4 border-transparent hover:border-action-pur transition `}
-              onClick={() => dispatch({ type: "toggleDarkMode" })}
+              onClick={() => dispatch && dispatch({ type: "toggleDarkMode" })}
             >
               {dark ? <Sun /> : <Moon />}
             </li>
@@ -77,7 +75,7 @@ const Nav = () => {
           </div>
           <div
             className={`capitalize cursor-pointer hover:text-action-pur dark:hover:text-white dark:hover:border-white border-b-4 border-transparent hover:border-action-pur transition `}
-            onClick={() => dispatch({ type: "toggleDarkMode" })}
+            onClick={() => dispatch && dispatch({ type: "toggleDarkMode" })}
           >
             {dark ? <Sun /> : <Moon />}
           </div>

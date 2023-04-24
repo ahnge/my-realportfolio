@@ -1,7 +1,15 @@
 import Link from "next/link";
 import styles from "./SingleProject.module.css";
 
-const SingleProject = ({ project }) => {
+type Props = {
+  project: {
+    title: string;
+    github: string;
+    shortDescription: string;
+  };
+};
+
+const SingleProject = ({ project }: Props) => {
   return (
     <Link href={project.github} target="_blank">
       <div className={styles.card}>

@@ -5,7 +5,11 @@ import MobileMenu from "./MobileMenu";
 
 import { useMenu, useMenuDispatch } from "./context/MenuContext";
 
-const Layout = ({ children }) => {
+type ChildrenProps = {
+  children: React.ReactNode;
+};
+
+const Layout = ({ children }: ChildrenProps) => {
   const { dark, menuIsOpen } = useMenu();
   const dispatch = useMenuDispatch();
 
@@ -16,9 +20,9 @@ const Layout = ({ children }) => {
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
-      dispatch({ type: "setDark" });
+      dispatch && dispatch({ type: "setDark" });
     } else {
-      dispatch({ type: "setLight" });
+      dispatch && dispatch({ type: "setLight" });
     }
   }, []);
 
