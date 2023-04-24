@@ -1,15 +1,33 @@
 import { createContext, useContext, useReducer } from "react";
 
+// types
+type ChildrenProps = {
+  children: React.ReactNode;
+};
+
+type MenuContextType = {
+  menuIsOpen: boolean;
+  dark: boolean;
+};
+
+type ACTIONTYPE =
+  | { type: "toggle" }
+  | { type: "toggleDarkMode" }
+  | { type: "setDark" }
+  | { type: "setLight" };
+
 // init state
 const initStates = {
   menuIsOpen: false,
   dark: false,
 };
 
-const MenuContext = createContext(initStates);
-const MenuDispatchContext = createContext(null);
+const MenuContext = createContext<MenuContextType>(initStates);
+const MenuDispatchContext = createContext<React.Dispatch<ACTIONTYPE> | null>(
+  null
+);
 
-export function MenuProvider({ children }) {
+export function MenuProvider({ children }: ChildrenProps) {
   const [state, dispatch] = useReducer(menuReducer, initStates);
 
   return (
@@ -21,7 +39,7 @@ export function MenuProvider({ children }) {
   );
 }
 
-function menuReducer(state, action) {
+function menuReducer(state: typeof initStates, action: ACTIONTYPE) {
   switch (action.type) {
     case "toggle": {
       return { ...state, menuIsOpen: !state.menuIsOpen };
@@ -39,9 +57,6 @@ function menuReducer(state, action) {
     case "setLight": {
       localStorage.setItem("theme", "light");
       return { ...state, dark: false };
-    }
-    default: {
-      throw Error("Unknown action: " + action.type);
     }
   }
 }

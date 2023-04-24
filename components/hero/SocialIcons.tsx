@@ -1,5 +1,5 @@
 import React from "react";
-import { FacebookLogo, LinkedInLogo, Mail } from "../logos/logo";
+import { FacebookLogo, LinkedInLogo } from "../logos/logo";
 import IconContainer from "./IconContainer";
 
 const SocialIcons = () => {

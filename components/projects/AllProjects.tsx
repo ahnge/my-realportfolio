@@ -5,13 +5,19 @@ export const projects = [
     id: 1,
     title: "Careerhub",
     shortDescription: "A job portal web application",
-    github: "https://github.com/ahnge/careerhub",
+    link: "https://github.com/ahnge/careerhub",
   },
   {
     id: 2,
     title: "Eurommr",
-    shortDescription: "a simple landing page",
-    github: "https://github.com/ahnge/eurommr_next",
+    shortDescription: "A simple landing page",
+    link: "https://github.com/ahnge/eurommr_next",
+  },
+  {
+    id: 3,
+    title: "Hotel Lin Set",
+    shortDescription: "A simple landing page using wordpress",
+    link: "https://hotellinsetpyinoolwin.com",
   },
 ];
 

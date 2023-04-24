@@ -19,7 +19,7 @@ const MobileMenu = () => {
 
   // functions to dispatch redux states
   const handleClick = () => {
-    dispatch({ type: "toggle" });
+    dispatch && dispatch({ type: "toggle" });
   };
 
   return (

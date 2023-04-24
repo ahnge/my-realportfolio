@@ -1,9 +1,6 @@
 import React from "react";
-import { useMenu } from "../context/MenuContext";
 
 const Blob = () => {
-  const { dark } = useMenu();
-
   return (
     <svg
       version="1.1"

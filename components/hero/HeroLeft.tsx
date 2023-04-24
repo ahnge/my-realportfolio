@@ -6,7 +6,7 @@ const HeroLeft = () => {
       <p
         className={`text-base font-semibold md:text-xl lg:text-2xl xl:text-[2rem] transition duration-1000 `}
       >
-        Hello, I&apos;m
+        Hello, I&#39;m
       </p>
       <h3
         className={`font-semibold text-2xl md:text-4xl mt-2 md:mt-4 transition duration-1000`}
@@ -17,8 +17,8 @@ const HeroLeft = () => {
         className={`font-normal text-base sm:mx-auto mt-3 md:mt-5 lg:text-lg max-w-md xl:mt-8 transition duration-1000 xl:mx-0`}
       >
         A web developer with a passion for creating beautiful and functional
-        websites. I&apox;m committed to delivering exceptional results for my
-        clients. Let&apox;s work together to bring your vision to life!
+        websites. I&#39;m committed to delivering exceptional results for my
+        clients. Let&#39;s work together to bring your vision to life!
       </p>
       <SocialIcons />
     </div>
