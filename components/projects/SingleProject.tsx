@@ -4,14 +4,14 @@ import styles from "./SingleProject.module.css";
 type Props = {
   project: {
     title: string;
-    github: string;
+    link: string;
     shortDescription: string;
   };
 };
 
 const SingleProject = ({ project }: Props) => {
   return (
-    <Link href={project.github} target="_blank">
+    <Link href={project.link} target="_blank">
       <div className={styles.card}>
         <div className={styles.cardContent}>
           <h3 className="text-lg font-bold capitalize">{project.title}</h3>
