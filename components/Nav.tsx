@@ -44,14 +44,14 @@ const Nav = () => {
           Nayzaw
         </Link>
         <nav className="hidden md:block">
-          <ul className="flex space-x-6 text-base font-semibold dark:text-whitejj lg:space-x-10 lg:text-lg">
+          <ul className="flex space-x-6 text-base font-semibold dark:text-white lg:space-x-10 lg:text-lg">
             {navArr.map((item, index) => {
               return (
                 <li key={index}>
                   <Link
                     href={`${item.link}`}
-                    className={`py-6 block capitalize cursor-pointer hover:text-egreen dark:hover:text-egreen dark:text-white dark:hover:border-egreen border-b-4 border-transparent hover:border-egreen transition ${
-                      item.link === router.pathname
+                    className={`py-6 block capitalize cursor-pointer hover:text-egreen dark:hover:text-egreen dark:hover:border-egreen border-b-4 border-transparent hover:border-egreen transition ${
+                      item.link == router.pathname
                         ? "text-egreen dark:text-egreen"
                         : ""
                     }`}

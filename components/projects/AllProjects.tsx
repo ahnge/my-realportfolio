@@ -14,21 +14,29 @@ export const projects = [
     title: "Careerhub",
     shortDescription: "A job portal web application",
     link: "https://careerhub.fun",
-    techs: [<LaravelLogo />, <TailwindLogo />, <MysqlLogo />],
+    techs: [
+      <LaravelLogo key={1} />,
+      <TailwindLogo key={2} />,
+      <MysqlLogo key={3} />,
+    ],
   },
   {
     id: 2,
     title: "Eurommr",
     shortDescription: "A simple landing page",
     link: "https://eurommr.com",
-    techs: [<NextLogo />, <TailwindLogo />, <StrapiLogo />],
+    techs: [
+      <NextLogo key={1} />,
+      <TailwindLogo key={2} />,
+      <StrapiLogo key={3} />,
+    ],
   },
   {
     id: 3,
     title: "Hotel Lin Set",
     shortDescription: "A simple landing page using wordpress",
     link: "https://hotellinsetpyinoolwin.com",
-    techs: [<WordpressLogo />],
+    techs: [<WordpressLogo key={1} />],
   },
 ];
 

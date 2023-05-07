@@ -16,9 +16,9 @@ const SingleProject = ({ project }: Props) => {
         <h3 className="text-lg font-bold capitalize">{project.title}</h3>
         <p className="text-sm font-light mt-2">{project.shortDescription} </p>
         <div className="flex space-x-4 items-center mt-2">
-          {project.techs.map((tech, id) => {
+          {project.techs.map((tech, index) => {
             return (
-              <div key={id} className="w-7 text-white">
+              <div key={index} className="w-7 text-white">
                 {tech}
               </div>
             );
