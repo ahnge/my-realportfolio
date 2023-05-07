@@ -9,7 +9,7 @@ const Blob = () => {
       width="100%"
       id="blobSvg"
       transform="rotate(0)"
-      className="text-pinky dark:text-action-pur"
+      className="text-white dark:text-black"
     >
       <path id="blob" fill="currentColor">
         {" "}

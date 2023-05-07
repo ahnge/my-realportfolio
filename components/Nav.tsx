@@ -33,13 +33,13 @@ const Nav = () => {
 
   return (
     <div
-      className="sticky top-0 z-10 px-5 lg:px-8 bg-stone-50 dark:bg-secondary-bg"
+      className="sticky top-0 z-10 px-5 lg:px-8 bg-white dark:bg-black"
       id="nav"
     >
       <div className="flex items-center justify-between w-full mx-auto text-tertairy-bg dark:text-action-pur max-w-7xl">
         <Link
           href="/"
-          className="block py-3 text-xl font-bold sm:text-2xl lg:text-3xl"
+          className="block py-3 text-xl text-black dark:text-egreen font-bold sm:text-2xl lg:text-3xl"
         >
           Nayzaw
         </Link>
@@ -50,9 +50,9 @@ const Nav = () => {
                 <li key={index}>
                   <Link
                     href={`${item.link}`}
-                    className={`py-6 block capitalize cursor-pointer hover:text-action-pur dark:hover:text-white dark:hover:border-white border-b-4 border-transparent hover:border-action-pur transition ${
+                    className={`py-6 block capitalize cursor-pointer hover:text-egreen dark:hover:text-egreen dark:text-white dark:hover:border-egreen border-b-4 border-transparent hover:border-egreen transition ${
                       item.link === router.pathname
-                        ? "text-action-pur dark:text-white"
+                        ? "text-egreen dark:text-egreen"
                         : ""
                     }`}
                   >
@@ -62,19 +62,19 @@ const Nav = () => {
               );
             })}
             <li
-              className={` py-6 block capitalize cursor-pointer hover:text-action-pur dark:hover:text-white dark:hover:border-white border-b-4 border-transparent hover:border-action-pur transition `}
+              className={` py-6 block dark:text-white capitalize cursor-pointer hover:text-egreen dark:hover:text-egreen dark:hover:border-egreen border-b-4 border-transparent hover:border-egreen transition `}
               onClick={() => dispatch && dispatch({ type: "toggleDarkMode" })}
             >
               {dark ? <Sun /> : <Moon />}
             </li>
           </ul>
         </nav>
-        <div className="flex py-3 space-x-3 text-black md:hidden dark:text-action-pur">
-          <div onClick={handleToggle} className="cursor-pointer">
+        <div className="flex py-3 space-x-3 text-black md:hidden dark:text-white">
+          <div onClick={handleToggle} className="cursor-pointer py-6">
             {menuIsOpen ? <CloseLogo /> : <Hamburger />}
           </div>
           <div
-            className={`capitalize cursor-pointer hover:text-action-pur dark:hover:text-white dark:hover:border-white border-b-4 border-transparent hover:border-action-pur transition `}
+            className={` py-6 block dark:text-white capitalize cursor-pointer hover:text-egreen dark:hover:text-egreen dark:hover:border-egreen border-b-4 border-transparent hover:border-egreen transition `}
             onClick={() => dispatch && dispatch({ type: "toggleDarkMode" })}
           >
             {dark ? <Sun /> : <Moon />}

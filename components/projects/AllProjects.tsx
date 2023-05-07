@@ -1,3 +1,11 @@
+import {
+  LaravelLogo,
+  MysqlLogo,
+  NextLogo,
+  StrapiLogo,
+  TailwindLogo,
+  WordpressLogo,
+} from "../logos/logo";
 import SingleProject from "./SingleProject";
 
 export const projects = [
@@ -5,19 +13,22 @@ export const projects = [
     id: 1,
     title: "Careerhub",
     shortDescription: "A job portal web application",
-    link: "https://github.com/ahnge/careerhub",
+    link: "https://careerhub.fun",
+    techs: [<LaravelLogo />, <TailwindLogo />, <MysqlLogo />],
   },
   {
     id: 2,
     title: "Eurommr",
     shortDescription: "A simple landing page",
-    link: "https://github.com/ahnge/eurommr_next",
+    link: "https://eurommr.com",
+    techs: [<NextLogo />, <TailwindLogo />, <StrapiLogo />],
   },
   {
     id: 3,
     title: "Hotel Lin Set",
     shortDescription: "A simple landing page using wordpress",
     link: "https://hotellinsetpyinoolwin.com",
+    techs: [<WordpressLogo />],
   },
 ];
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { FacebookLogo, LinkedInLogo } from "../logos/logo";
+import { FacebookLogo, GithubLogo, LinkedInLogo } from "../logos/logo";
 import IconContainer from "./IconContainer";
 
 const SocialIcons = () => {
@@ -10,6 +10,9 @@ const SocialIcons = () => {
       </IconContainer>
       <IconContainer link="https://www.facebook.com/nayzawminnaing1">
         <FacebookLogo />
+      </IconContainer>
+      <IconContainer link="https://www.github.com/ahnge">
+        <GithubLogo />
       </IconContainer>
     </div>
   );

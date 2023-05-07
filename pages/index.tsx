@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nayzaw Oppa</title>
-        <link rel="shortcut icon" href="peace.ico" type="image/x-icon" />
+        <title>Nayzaw Minnaing</title>
+        <link rel="shortcut icon" href="me.jpeg" type="image/x-icon" />
         <meta name="keywords" content="nayzaw nayzawminnaing" />
         <meta
           name="description"

@@ -7,12 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-bg": "#1A1A29",
-        "secondary-bg": "#181824",
-        "action-pur": "#7562E0",
-        pinky: "#ec407a",
-        "tertairy-bg": "#31313F",
-        "c-border": "rgb(3, 169, 244)",
+        egreen: "#209D5C",
+        estone: "#F5F5F5",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

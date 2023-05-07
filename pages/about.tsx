@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="w-full min-h-[85vh] pb-10 dark:bg-primary-bg bg-white sm:pb-0">
-      <main className="mx-auto text-black p-7 lg:p-10 dark:text-white max-w-7xl lg:pt-14">
+    <div className="w-full min-h-[85vh] pb-10 bg-egreen sm:pb-0">
+      <main className="mx-auto text-white p-7 lg:p-10 max-w-7xl lg:pt-14">
         <h1 className="text-2xl font-bold sm:text-3xl lg:text-4xl">About</h1>
         <p className="mt-4">
           Hi, I&#39;m Nay Zaw Min Naing, a self-taught web developer with a
