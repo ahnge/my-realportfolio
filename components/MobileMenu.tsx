@@ -6,10 +6,6 @@ const navArr = [
     link: "",
   },
   {
-    title: "about",
-    link: "about",
-  },
-  {
     title: "projects",
     link: "projects",
   },

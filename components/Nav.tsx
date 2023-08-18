@@ -22,10 +22,6 @@ const Nav = () => {
       link: "/",
     },
     {
-      title: "about",
-      link: "/about",
-    },
-    {
       title: "projects",
       link: "/projects",
     },
