@@ -18,7 +18,7 @@ const SingleProject = ({ project }: Props) => {
         <div className="flex space-x-4 items-center mt-2">
           {project.techs.map((tech, index) => {
             return (
-              <div key={index} className="w-7 text-white">
+              <div key={index} className="h-7 w-7 text-white">
                 {tech}
               </div>
             );
