@@ -5,6 +5,7 @@ import {
   StrapiLogo,
   TailwindLogo,
   DjangoLogo,
+  WordpressLogo,
 } from "../logos/logo";
 import SingleProject from "./SingleProject";
 
@@ -48,6 +49,13 @@ export const projects = [
     shortDescription: "Fem challenge to refresh my css skills.",
     link: "https://sunnyside-agency-ahnge.vercel.app/",
     techs: [<NextLogo key={1} />, <TailwindLogo key={2} />],
+  },
+  {
+    id: 5,
+    title: "HotelLinSet Wordpress project",
+    shortDescription: "Freelance Wordpress project for a hotel.",
+    link: "https://hotellinsetpyinoolwin.com/",
+    techs: [<WordpressLogo key={1} />],
   },
 ];
 
