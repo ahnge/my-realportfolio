@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import MobileMenu from "./MobileMenu";
+import MaintenancePage from "./MaintenancePage";
 
 import { useMenu, useMenuDispatch } from "./context/MenuContext";
 
@@ -25,6 +26,9 @@ const Layout = ({ children }: ChildrenProps) => {
       dispatch && dispatch({ type: "setLight" });
     }
   }, []);
+
+  const underMaintenance = process.env.MAINTENANCE_MODE === "true";
+  if (underMaintenance) return <MaintenancePage />;
 
   return (
     <div className={`font-poppins ${dark ? "dark" : ""}`}>
