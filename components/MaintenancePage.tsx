@@ -8,7 +8,7 @@ function MaintenancePage() {
       <p className="text-xl text-gray-600 mb-8">Be back online soon!</p>
       <p className="text-lg text-gray-500">
         Estimated time until completion:{" "}
-        <b>I'm not working on this currently.</b>
+        <b>I&apos;m not working on this currently.</b>
       </p>
     </div>
   );
