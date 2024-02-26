@@ -2,7 +2,7 @@ import { WavyBackground } from "../ui/WavyBackground";
 
 const MaintenancePage = () => {
   return (
-    <WavyBackground className="max-w-4xl mx-auto pb-40">
+    <WavyBackground className="max-w-4xl mx-auto pb-40 flex justify-center items-center flex-col min-h-[100vh]">
       <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
         Under Maintenance
       </p>
