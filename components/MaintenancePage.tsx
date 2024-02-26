@@ -7,7 +7,7 @@ const MaintenancePage = () => {
         Under Maintenance
       </p>
       <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
-        We'll be back soon!
+        We&apos;ll be back soon!
       </p>
     </WavyBackground>
   );
