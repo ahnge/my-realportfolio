@@ -27,7 +27,7 @@ const Layout = ({ children }: ChildrenProps) => {
     }
   }, []);
 
-  const underMaintenance = process.env.MAINTENANCE_MODE === "true";
+  const underMaintenance = true;
   if (underMaintenance) return <MaintenancePage />;
 
   return (

@@ -1,17 +1,16 @@
-function MaintenancePage() {
+import { WavyBackground } from "../ui/WavyBackground";
+
+const MaintenancePage = () => {
   return (
-    <div className="maintenance-page bg-gray-100 flex flex-col items-center justify-center min-h-screen">
-      <iframe src="https://lottie.host/embed/f4effde0-30b0-4294-b93c-00370585d40a/rG1H3si2ag.lottie"></iframe>
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">
+    <WavyBackground className="max-w-4xl mx-auto pb-40 flex justify-center items-center flex-col min-h-[100vh]">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
         Under Maintenance
-      </h1>
-      <p className="text-xl text-gray-600 mb-8">Be back online soon!</p>
-      <p className="text-lg text-gray-500">
-        Estimated time until completion:{" "}
-        <b>I&apos;m not working on this currently.</b>
       </p>
-    </div>
+      <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+        We&apos;ll be back soon!
+      </p>
+    </WavyBackground>
   );
-}
+};
 
 export default MaintenancePage;
