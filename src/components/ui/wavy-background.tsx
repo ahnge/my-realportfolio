@@ -1,6 +1,6 @@
 "use client";
-import { cn } from "../utils/cn";
-import React, { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
+import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
 
 export const WavyBackground = ({
@@ -62,11 +62,11 @@ export const WavyBackground = ({
   };
 
   const waveColors = colors ?? [
-    "#38bdf8",
-    "#818cf8",
-    "#c084fc",
-    "#e879f9",
-    "#22d3ee",
+    "#371E30",
+    "#E8E1EF",
+    "#E98A15",
+    "#003B36",
+    "#F9FBB2",
   ];
   const drawWave = (n: number) => {
     nt += getSpeed();
@@ -99,6 +99,16 @@ export const WavyBackground = ({
     };
   }, []);
 
+  const [isSafari, setIsSafari] = useState(false);
+  useEffect(() => {
+    // I'm sorry but i have got to support it on safari.
+    setIsSafari(
+      typeof window !== "undefined" &&
+        navigator.userAgent.includes("Safari") &&
+        !navigator.userAgent.includes("Chrome")
+    );
+  }, []);
+
   return (
     <div
       className={cn(
@@ -107,9 +117,12 @@ export const WavyBackground = ({
       )}
     >
       <canvas
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 w-full"
         ref={canvasRef}
         id="canvas"
+        style={{
+          ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
+        }}
       ></canvas>
       <div className={cn("relative z-10", className)} {...props}>
         {children}
