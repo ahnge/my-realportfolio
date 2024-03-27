@@ -8,7 +8,7 @@ const Hero = () => {
         Welcome to my site
       </p>
       <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
-        Waves look cool. Aren't they?
+        Waves look cool. Aren&apos;t they?
       </p>
     </WavyBackground>
   );
