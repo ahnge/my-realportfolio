@@ -31,15 +31,19 @@ export function Cards() {
             />
           </Card>
         </Link>
-        <div className="w-full">
-          <Card title="Soon" icon={<AceternityIcon />}>
+        <Link
+          className="w-full"
+          href={"https://github.com/ahnge"}
+          target="_blank"
+        >
+          <Card title="Github" icon={<AceternityIcon />}>
             <CanvasRevealEffect
               animationSpeed={5.1}
               containerClassName="bg-[#371E30]"
               colors={[[236, 72, 153]]}
             />
           </Card>
-        </div>
+        </Link>
       </div>
     </>
   );
