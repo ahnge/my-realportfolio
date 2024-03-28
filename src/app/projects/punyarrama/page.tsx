@@ -60,8 +60,8 @@ const Punyarrama = () => {
         <ul>
           <li>
             <span className="font-semibold">Enhanced User Experience:</span> The
-            website provides a user-friendly sign-up form for "yawgis" to
-            register for the upcoming event.
+            website provides a user-friendly sign-up form for &quot;yawgis&quot;
+            to register for the upcoming event.
           </li>
           <li>
             <span className="font-semibold">
@@ -95,8 +95,8 @@ const Punyarrama = () => {
 
         <h3 className="mt-5 lg:text-xl font-semibold">Moving Forward</h3>
         <p>
-          I'm confident that the Punyarrama Monastery website will serve as a
-          valuable tool for their internal operations. I'm also eager to
+          I&apos;m confident that the Punyarrama Monastery website will serve as
+          a valuable tool for their internal operations. I&apos;m also eager to
           leverage the experience gained on this project for future development
           endeavors.
         </p>
