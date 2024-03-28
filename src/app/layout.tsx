@@ -25,7 +25,7 @@ const navItems = [
   },
   {
     name: "Resume",
-    link: "/",
+    link: "https://docs.google.com/document/d/1z0ynjRNgKqMW-PqqIdJHufdfbxjeeZd0PeD08_H30HM/edit?usp=sharing",
     icon: <FileText />,
   },
 ];
