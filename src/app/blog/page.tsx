@@ -1,19 +1,46 @@
-import React from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import BlurFade from "@/components/magicui/blur-fade";
+import { getBlogPosts } from "@/data/blog";
+import Link from "next/link";
 
-const Blog = () => {
-  return (
-    <div className="container min-h-screen flex flex-col justify-center items-center">
-      <div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-        <div className="max-w-2xl mx-auto p-4">
-          <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-            Comming soon!
-          </h1>
-        </div>
-        <BackgroundBeams />
-      </div>
-    </div>
-  );
+export const metadata = {
+  title: "Blog",
+  description: "My thoughts on software development, life, and more.",
 };
 
-export default Blog;
+const BLUR_FADE_DELAY = 0.04;
+
+export default async function BlogPage() {
+  const posts = await getBlogPosts();
+
+  return (
+    <section>
+      <BlurFade delay={BLUR_FADE_DELAY}>
+        <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
+      </BlurFade>
+      {posts
+        .sort((a, b) => {
+          if (
+            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
+          ) {
+            return -1;
+          }
+          return 1;
+        })
+        .map((post, id) => (
+          <BlurFade delay={BLUR_FADE_DELAY * 2 + id * 0.05} key={post.slug}>
+            <Link
+              className="flex flex-col space-y-1 mb-4"
+              href={`/blog/${post.slug}`}
+            >
+              <div className="w-full flex flex-col">
+                <p className="tracking-tight">{post.metadata.title}</p>
+                <p className="h-6 text-xs text-muted-foreground">
+                  {post.metadata.publishedAt}
+                </p>
+              </div>
+            </Link>
+          </BlurFade>
+        ))}
+    </section>
+  );
+}
