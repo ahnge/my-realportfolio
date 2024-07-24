@@ -24,7 +24,7 @@ import IconCloud from "@/components/magicui/icon-cloud";
 
 const IconCloudSection = () => {
   return (
-    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background px-20 pb-20 pt-8 ">
+    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background px-20 pb-10 pt-4 ">
       <IconCloud />
     </div>
   );
