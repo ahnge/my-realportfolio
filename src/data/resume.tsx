@@ -130,7 +130,7 @@ export const DATA = {
       dates: "Jul 2023 - Sep 2023",
       active: false,
       description:
-        "Thread Clone is a social media thread clone project, allowing users to create and participate in threaded discussions. I had to took this site down as aws free tire is expired.",
+        "Thread Clone is a social media thread clone project, allowing users to create and participate in threaded discussions. I had to take this site down as aws free tire is expired.",
       technologies: ["Python", "Django", "HTMX", "Mysql", "Javascript"],
       links: [
         {
