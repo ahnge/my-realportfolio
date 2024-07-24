@@ -1,5 +1,8 @@
 import { Icons } from "@/components/icons";
 import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
+import careerhubThumbnail from "@/assets/careerhub.png";
+import hotelLsThumbnail from "@/assets/hotel-ls.png";
+import threadThumbnail from "@/assets/thread.png";
 
 export const DATA = {
   name: "NayZaw Min Naing",
@@ -109,32 +112,68 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Hotel Lin Set",
+      href: "",
+      dates: "Mar 2024",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
+        "This project is a landing page project that I freelanced for a client. Unfortunately, my client stops operating this business. You can still check it out, I haven't taken this down yet.",
+      technologies: ["Nextjs", "TailwindCSS", "Typescript", "Vercel"],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://hotellinsetpyinoolwin.com",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      image: hotelLsThumbnail,
+      video: "",
+    },
+    {
+      title: "Thread clone",
+      href: "",
+      dates: "Jul 2023 - Sep 2023",
+      active: false,
+      description:
+        "Thread Clone is a social media thread clone project, allowing users to create and participate in threaded discussions. I also had to take this down too. You can still build from source.",
+      technologies: ["Python", "Django", "HTMX", "Mysql", "Javascript"],
+      links: [
+        {
+          type: "Demo",
+          href: "https://www.youtube.com/watch?v=Q8CkmbLg2Rw",
+          icon: <Icons.youtube className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/ahnge/thread-clone",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: threadThumbnail,
+      video: "",
+    },
+    {
+      title: "Careerhub",
+      href: "",
+      dates: "Mar 2023 - April 2023",
+      active: false,
+      description:
+        "Careerhub is a job portal web application developed for the CS50 course final project. The application allows employers to create job postings and job seekers to apply to those postings. I had took this site down as aws free tire is expired.",
+      technologies: ["Php", "Laravel", "Mysql", "TailwindCSS", "Javascript"],
+      links: [
+        {
+          type: "Demo",
+          href: "https://www.youtube.com/watch?v=TrrCWuIUeb8",
+          icon: <Icons.youtube className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/ahnge/careerhub",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: careerhubThumbnail,
+      video: "",
     },
   ],
   hackathons: [
@@ -146,7 +185,13 @@ export const DATA = {
         "Developed a web application to solve fictional beverage production & distribution company's problems. Addressed inconsistencies in orders and product details between internal departments",
       image: "./jica-logo.jpeg",
       mlh: "",
-      links: [],
+      links: [
+        {
+          icon: <Icons.github className="size-3" />,
+          title: "Source",
+          href: "https://github.com/ahnge/flavor-wave",
+        },
+      ],
     },
   ],
 } as const;

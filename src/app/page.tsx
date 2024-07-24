@@ -155,9 +155,9 @@ export default function Page() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   Hackathons
                 </div>
-                {/* <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   I like building things
-                </h2> */}
+                </h2>
                 {/* <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   During my time in university, I attended{" "}
                   {DATA.hackathons.length}+ hackathons. People from around the
@@ -202,11 +202,14 @@ export default function Page() {
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
-                <Link href={"#"} className="text-blue-500 hover:underline">
-                  with a direct question on twitter
+                <Link
+                  href={"https://www.facebook.com/nayzawminnaing1"}
+                  className="text-blue-500 hover:underline"
+                  target="_blank"
+                >
+                  with a direct question on facebook
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond whenever I can.
               </p>
             </div>
           </BlurFade>
