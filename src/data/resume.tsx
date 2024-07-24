@@ -6,7 +6,7 @@ import threadThumbnail from "@/assets/thread.png";
 
 export const DATA = {
   name: "NayZaw Min Naing",
-  initials: "DV",
+  initials: "NZ",
   url: "https://nayzaw.vercel.app",
   location: "Taunggyi, Myanmar",
   locationLink: "",
@@ -130,7 +130,7 @@ export const DATA = {
       dates: "Jul 2023 - Sep 2023",
       active: false,
       description:
-        "Thread Clone is a social media thread clone project, allowing users to create and participate in threaded discussions. I also had to take this down too. You can still build from source.",
+        "Thread Clone is a social media thread clone project, allowing users to create and participate in threaded discussions. I had to took this site down as aws free tire is expired.",
       technologies: ["Python", "Django", "HTMX", "Mysql", "Javascript"],
       links: [
         {
@@ -153,7 +153,7 @@ export const DATA = {
       dates: "Mar 2023 - April 2023",
       active: false,
       description:
-        "Careerhub is a job portal web application developed for the CS50 course final project. The application allows employers to create job postings and job seekers to apply to those postings. I had took this site down as aws free tire is expired.",
+        "Careerhub is a job portal web application developed for the CS50 course final project. The application allows employers to create job postings and job seekers to apply to those postings. I also had to take this down too. You can still build from source.",
       technologies: ["Php", "Laravel", "Mysql", "TailwindCSS", "Javascript"],
       links: [
         {
