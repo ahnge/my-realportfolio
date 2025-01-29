@@ -117,8 +117,6 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     siGitlab,
     siFigma,
     siNpm,
-    siLaravel,
-    siDjango,
   ];
 
   const renderedIcons = useMemo(() => {

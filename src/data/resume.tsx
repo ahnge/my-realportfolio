@@ -90,7 +90,7 @@ export const DATA = {
   education: [
     {
       school: "Strategy First University",
-      href: "https://strategyfirst.edu.mm/",
+      href: "https://drive.google.com/file/d/1VDnI6XdDE8XdXhhrkr9SWt4DV32gMhmp/view?usp=sharing",
       degree: "Diploma in Business management & Entrepreneurship",
       logoUrl: "/sfu-logo.jpg",
       start: "2023 Dec",
