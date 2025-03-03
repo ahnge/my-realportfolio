@@ -3,6 +3,7 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 import careerhubThumbnail from "@/assets/careerhub.png";
 import hotelLsThumbnail from "@/assets/hotel-ls.png";
 import threadThumbnail from "@/assets/thread.png";
+import zayThumbnail from "@/assets/zicon.svg";
 
 export const DATA = {
   name: "NayZaw Min Naing",
@@ -10,7 +11,7 @@ export const DATA = {
   url: "https://nayzaw.vercel.app",
   location: "Taunggyi, Myanmar",
   locationLink: "",
-  description: "React and Nodejs develoepr. I love building things.",
+  description: "Aspiring Software Engineer. I love building things.",
   summary:
     "I'm a Software Developer with a love for technology and a curiosity about the world. Currently, I'm exploring my passions and interests, both within and beyond my work. I'm always learning, growing, and seeking to understand how I can make the most of my time and skills.",
   avatarUrl: "/me.jpg",
@@ -106,6 +107,24 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Ahaung Tann",
+      href: "",
+      dates: "Mar 2025",
+      active: true,
+      description:
+        "A platform for buying and selling used items with a credit-based payment system and seller-managed shipping. Currently in development—use 111111 as OTP for registration.",
+      technologies: ["Expressjs", "React", "Typescript", "Postgresql"],
+      links: [
+        {
+          type: "Website",
+          href: "http://ec2-43-208-78-48.ap-southeast-7.compute.amazonaws.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: zayThumbnail,
+      video: "",
+    },
     {
       title: "Hotel Lin Set",
       href: "",
