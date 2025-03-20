@@ -118,7 +118,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "http://ec2-43-208-78-102.ap-southeast-7.compute.amazonaws.com/",
+          href: "http://ec2-43-208-78-162.ap-southeast-7.compute.amazonaws.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
