@@ -115,14 +115,14 @@ export const DATA = {
       description:
         "A platform for buying and selling used items with a credit-based payment system and seller-managed shipping. Currently in development & unavailable. Coming soon in April 2025.",
       technologies: ["Expressjs", "React", "Typescript", "Postgresql"],
-      // links: [
-      //   {
-      //     type: "Website",
-      //     href: "http://ec2-43-208-78-162.ap-southeast-7.compute.amazonaws.com/",
-      //     icon: <Icons.globe className="size-3" />,
-      //   },
-      // ],
-      links: [],
+      links: [
+        {
+          type: "Website",
+          href: "http://ec2-43-208-138-176.ap-southeast-7.compute.amazonaws.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      // links: [],
       image: zayThumbnail,
       video: "",
     },
