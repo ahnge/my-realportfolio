@@ -64,6 +64,18 @@ export const DATA = {
 
   work: [
     {
+      company: "X Inc",
+      href: "https://www.xinc.co.jp/",
+      badges: [],
+      location: "Remote",
+      title: "Software Developer",
+      logoUrl: "/xinc.jpg",
+      start: "April 2025",
+      end: "Present",
+      description:
+        "Contributing to the development of Writevideo, a video creation platform, by implementing new features and optimizing performance. Collaborated with cross-functional teams.",
+    },
+    {
       company: "REI",
       href: "",
       badges: [],
@@ -71,7 +83,7 @@ export const DATA = {
       title: "Junior Frontend Developer",
       logoUrl: "",
       start: "Jan 2024",
-      end: "Present",
+      end: "April 2025",
       description:
         "As a Junior Frontend Developer, I work closely with the tech team to create web applications. My responsibilities include developing user interfaces, implementing new features, and optimizing performance. I have contributed to projects using languages such as JavaScript, TypeScript, and React, ensuring a seamless user experience.",
     },
@@ -113,12 +125,12 @@ export const DATA = {
       dates: "Mar 2025",
       active: true,
       description:
-        "A platform for buying and selling used items with a credit-based payment system and seller-managed shipping. Currently in development & unavailable. Coming soon in April 2025.",
+        "A Haung Tann connects sellers and buyers of used goods through a trusted, simple platform that makes secondhand trading effortless.",
       technologies: ["Expressjs", "React", "Typescript", "Postgresql"],
       links: [
         {
           type: "Website",
-          href: "http://ec2-43-208-138-176.ap-southeast-7.compute.amazonaws.com",
+          href: "https://ahaungtann.com",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -126,24 +138,24 @@ export const DATA = {
       image: zayThumbnail,
       video: "",
     },
-    {
-      title: "Hotel Lin Set",
-      href: "",
-      dates: "Mar 2024",
-      active: true,
-      description:
-        "This project is a landing page project that I freelanced for a client. Unfortunately, my client stops operating this business. You can still check it out, I haven't taken this down yet.",
-      technologies: ["Nextjs", "TailwindCSS", "Typescript", "Vercel"],
-      links: [
-        {
-          type: "Website",
-          href: "https://hotellinsetpyinoolwin.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: hotelLsThumbnail,
-      video: "",
-    },
+    // {
+    //   title: "Hotel Lin Set",
+    //   href: "",
+    //   dates: "Mar 2024",
+    //   active: true,
+    //   description:
+    //     "This project is a landing page project that I freelanced for a client. Unfortunately, my client stops operating this business. You can still check it out, I haven't taken this down yet.",
+    //   technologies: ["Nextjs", "TailwindCSS", "Typescript", "Vercel"],
+    //   links: [
+    //     {
+    //       type: "Website",
+    //       href: "https://hotellinsetpyinoolwin.com",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    //   image: hotelLsThumbnail,
+    //   video: "",
+    // },
     {
       title: "Thread clone",
       href: "",
